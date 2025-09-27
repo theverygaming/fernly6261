@@ -53,10 +53,9 @@ fernly-usb-loader, prepend the one line:
 and append the six lines:
 
     ]
-    
+
     f = open('rom.bin','wb')
-    for s in data:
-      f.write(chr(int(s,16)))
+    f.write(bytes(int(s,16) for s in data))
     f.close()
 
 Save it as a file with a ".py" suffix and run it as a Python script.
