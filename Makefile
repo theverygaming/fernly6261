@@ -6,7 +6,7 @@ BUILD = build
 CROSS_COMPILE=arm-none-eabi-
 
 CFLAGS = -march=armv5te -mfloat-abi=soft -Wall \
-	 -Os -Iinclude -marm -fno-stack-protector
+	 -Os -Iinclude -marm -fno-stack-protector -ffreestanding
 AFLAGS = 
 
 LDFLAGS = --nostdlib -T fernvale.ld
