@@ -1755,7 +1755,7 @@ int main(int argc, char **argv) {
 		}
 
 		if (logname) {
-			logfd = open(logname, O_WRONLY | O_CREAT | O_APPEND);
+			logfd = open(logname, O_WRONLY | O_CREAT | O_APPEND, 0644);
 			if (-1 == logfd)
 				perror("Warning: could not open logfile");
 		}
